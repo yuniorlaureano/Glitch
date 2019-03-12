@@ -1,3 +1,22 @@
 {
-	"author":"Yunior Laureano"
+  "name": "glitch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuniorlaureano/Glitch.git"
+  },
+  "author": "Yunior Laureano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuniorlaureano/Glitch/issues"
+  },
+  "homepage": "https://github.com/yuniorlaureano/Glitch#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
