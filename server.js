@@ -17,21 +17,25 @@ app.use(bodyParser.json())
 
 var data = [
     {
+        id: 1,
         nombre: "Primera base",
         posicion: "Catcher",
         equipo: "Rojos"
     },
     {
+        id: 2,
         nombre: "Segunda base",
         posicion: "Joey Votto",
         equipo: "Cachorros"
     },
     {
+        id: 3,
         nombre: "Campocorto",
         posicion: "José Altuve",
         equipo: "Astros"
     },
     {
+        id: 4,
         nombre: "Willson Contreras",
         posicion: "Corey Seager",
         equipo: "Dodgers"
@@ -51,7 +55,37 @@ app.get('/data', (req, res) => {
 app.post('/data', (req, res) => {
     res.status(200);
     res.set('Content-Type', 'application/json');
-    data.push(req.body);
+    data.push({
+        ...req.body,
+        id: data.length + 1
+    });    
+    res.end(JSON.stringify(data));
+});
+
+app.delete('/data/:id', (req, res) => {
+    res.status(200);
+    res.set('Content-Type', 'application/json');
+
+    data = data.filter(function(item){
+        return item.id != req.params.id;
+    });
+
+    res.end(JSON.stringify(data));
+});
+
+app.put('/data/:id', (req, res) => {
+    res.status(200);
+    res.set('Content-Type', 'application/json');
+
+    data = data.filter(function(item){
+        return item.id != req.params.id;
+    });
+
+    data.push({
+        ...req.body,
+        id: req.params.id
+    });   
+
     res.end(JSON.stringify(data));
 });
 

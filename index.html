@@ -50,6 +50,7 @@
                             <th>Nombre</th>
                             <th>Posicion</th>
                             <th>Equipo</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -101,6 +102,7 @@
            <span class="close">&times;</span>
            <div>
             <form action="/action_page.php">
+               <input type="hidden" id="input-id">
               <label for="input-name">Nombre</label>
               <input type="text" id="input-name" name="input-name" placeholder="Nombre">
           
@@ -111,6 +113,7 @@
               <input type="text" id="input-equipo" name="input-equipo" placeholder="Equipo">
             
               <button type="button" id="guardar">Guardar</button>
+              <button type="button" id="editar">Editar</button>
             </form>
           </div>
          </div>
