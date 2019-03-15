@@ -43,7 +43,8 @@
                </footer>
             </article>
             <article>
-                <table>
+               <button id="add">ADD</button>
+                <table id="export">
                     <thead>
                         <tr>
                             <th>Nombre</th>
@@ -52,26 +53,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Primera base</td>
-                            <td>Joey Votto</td>
-                            <td>Rojos</td>
-                        </tr>
-                        <tr>
-                            <td>Willson Contreras</td>
-                            <td>Catcher</td>
-                            <td>Cachorros</td>
-                        </tr>
-                        <tr>
-                            <td>Segunda base</td>
-                            <td>José Altuve</td>
-                            <td>Astros</td>
-                        </tr>
-                        <tr>
-                            <td>Campocorto</td>
-                            <td>Corey Seager</td>
-                            <td>Dodgers</td>
-                        </tr>
                     </tbody>
                 </table>
             </article>
@@ -111,5 +92,33 @@
             Derechos Reservados &copy; 2010-2011
          </footer>
       </div>
+
+
+      <div id="myModal" class="modal">
+
+         <!-- Modal content -->
+         <div class="modal-content">
+           <span class="close">&times;</span>
+           <div>
+            <form action="/action_page.php">
+              <label for="input-name">Nombre</label>
+              <input type="text" id="input-name" name="input-name" placeholder="Nombre">
+          
+              <label for="input-position">Piscion</label>
+              <input type="text" id="input-position" name="input-position" placeholder="Position">
+          
+              <label for="input-equipo">Equipo</label>
+              <input type="text" id="input-equipo" name="input-equipo" placeholder="Equipo">
+            
+              <button type="button" id="guardar">Guardar</button>
+            </form>
+          </div>
+         </div>
+       
+       </div>
+
+      <script src="jquery-3.3.1.slim.min.js" ></script>
+      <script src="axios.min.js" ></script>
+      <script src="app.js" ></script>
    </body>
 </html>
