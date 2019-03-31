@@ -20,25 +20,29 @@ var data = [
         id: 1,
         nombre: "Primera base",
         posicion: "Catcher",
-        equipo: "Rojos"
+        equipo: "Rojos",
+        homerun: 20
     },
     {
         id: 2,
         nombre: "Segunda base",
         posicion: "Joey Votto",
-        equipo: "Cachorros"
+        equipo: "Cachorros",
+        homerun: 50
     },
     {
         id: 3,
         nombre: "Campocorto",
         posicion: "José Altuve",
-        equipo: "Astros"
+        equipo: "Astros",
+        homerun: 30
     },
     {
         id: 4,
         nombre: "Willson Contreras",
         posicion: "Corey Seager",
-        equipo: "Dodgers"
+        equipo: "Dodgers",
+        homerun: 10
     }
 ];
 
@@ -95,5 +99,5 @@ app.use((req, res)=>{
 });
 
 app.listen(3000, ()=>{
-    console.log('server running');
+    console.log('server running: ' + 3000);
 });
